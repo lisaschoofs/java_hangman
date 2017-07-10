@@ -22,6 +22,12 @@ class Game {
     return letter;
   }
 
+  public boolean applyGuess(String letters){
+    if(letters.length() == 0){
+      throw new IllegalArgumentException("No Letter Found.");
+    }
+    return applyGuess(letters.charAt(0));
+  }
 
   public boolean applyGuess(char letter){
    letter = normalizeGuess(letter);
@@ -32,7 +38,7 @@ class Game {
     misses += letter;
    }
      return isHit;
-   } 
+   }
 
   public int getRemainingTries() {
     return MAX_MISSES - misses.length();

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Prompter {
+public class Prompter {
   private Game game;
 
   public Prompter(Game game) {
